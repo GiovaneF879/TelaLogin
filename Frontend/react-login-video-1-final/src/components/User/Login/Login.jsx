@@ -51,23 +51,25 @@ const UserLogin = () => {
       <h1 className="user-login__title">Acessar o Sistema</h1>
       <form onSubmit={onSubmit}>
         <div className="user-login__form-control">
-          <label htmlFor="user">Usuário</label>
+          <label htmlFor="user"></label>
           <input
             id="user"
             type="text"
             name="user"
             onChange={onChange}
             value={values.user}
+            placeholder=" Usuário "
           />
         </div>
         <div className="user-login__form-control">
-          <label htmlFor="password">Senha</label>
+          <label htmlFor="password"></label>
           <input
             id="password"
             type="password"
             name="password"
             onChange={onChange}
             value={values.password}
+            placeholder=" Senha "
           />
         </div>
         {error && (
