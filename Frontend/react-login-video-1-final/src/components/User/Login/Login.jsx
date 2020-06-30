@@ -2,7 +2,8 @@ import React, { useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import StoreContext from 'components/Store/Context';
 import UIButton from 'components/UI/Button/Button';
-
+import logo from './logot.png';
+import api from 'Service/api';
 import './Login.css';
 
 function initialState() {
@@ -10,7 +11,7 @@ function initialState() {
 }
 
 function login({ user, password }) {
-  if (user === 'admin' && password === 'admin') {
+  if (user === 'Pet' ,'admin','ONG Santa Cruz' && password === 'admin') {
     return { token: '1234' };
   }
   return { error: 'Usuário ou senha inválido' };
@@ -23,6 +24,7 @@ const UserLogin = () => {
   const history = useHistory();
 
   function onChange(event) {
+
     const { value, name } = event.target;
 
     setValues({
@@ -47,8 +49,7 @@ const UserLogin = () => {
 
   return (
     <div className="user-login">
-      <img src="./logot.png"/>
-      <h1 className="user-login__title">Acessar o Sistema</h1>
+      <img src={logo} className="logo" alt="logo" />
       <form onSubmit={onSubmit}>
         <div className="user-login__form-control">
           <label htmlFor="user"></label>
