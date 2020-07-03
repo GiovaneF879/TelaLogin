@@ -3,12 +3,16 @@ using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using OngPetCare.Api;
+using OngPetCare.infra.Context;
+using OngPetCare.infra.Models;
 
 namespace Shop
 {
@@ -25,6 +29,24 @@ namespace Shop
         {
             services.AddCors();
             services.AddControllers();
+
+            services.AddDbContext<DataBaseContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")
+                    , opt => opt.MigrationsAssembly("OngPetCare.infra")));
+
+
+            services.AddIdentity<User, IdentityRole>(options =>
+                         {
+                             options.Password.RequiredLength = 6;
+                             options.Password.RequireLowercase = false;
+                             options.Password.RequireUppercase = false;
+                             options.Password.RequireNonAlphanumeric = false;
+                             options.Password.RequireDigit = false;
+                         })
+            .AddEntityFrameworkStores<DataBaseContext>()
+            .AddDefaultTokenProviders();
+
+
 
             var key = Encoding.ASCII.GetBytes(Settings.Secret);
             services.AddAuthentication(x =>
