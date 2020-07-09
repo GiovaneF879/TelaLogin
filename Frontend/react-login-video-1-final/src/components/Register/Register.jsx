@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import StoreContext from 'components/Store/Context';
 import UIButton from 'components/UI/Button/Button';
 import logo from './logot.png';
-import './Login.css';
+import './Registerr.css';
 import LoginService from 'pages/Login/Service';
 
 const service = new LoginService();
@@ -12,56 +12,16 @@ function initialState() {
   return { user: '', password: '' };
 }
 
-async function login({ user, password }) {
-  const { status, data } = await service.login(user, password);
-  if (status === 200) {
-    return { token: data.token };
-  }
-  return { error: 'Usuário ou senha inválido' }
-}
-
-async function recuperarSenha(email) {
-  console.log(email, "Email");
-  const { status, data } = await service.recuperarSenha(email);
-  if (status === 200) {
-    return { token: data.token };
-  }
-  return { error: 'Erro ao recuperar senha, contate o suporte' }
-}
 
 const UserLogin = () => {
-  const [values, setValues] = useState(initialState);
-  const [error, setError] = useState(null);
-  const { setToken } = useContext(StoreContext);
-  const history = useHistory();
-
-  function onChange(event) {
-
-    const { value, name } = event.target;
-
-    setValues({
-      ...values,
-      [name]: value
-    });
-  }
+  //const [error, setError] = useState(null);
 
   async function onSubmit(event) {
-    event.preventDefault();
 
-    const { token, error } = await login(values);
-
-    if (token) {
-      setToken(token);
-      return history.push('/');
-    }
-
-    setError(error);
-    setValues(initialState);
   }
 
   return (
     <div className="user-login">
-      <img src={logo} className="logo" alt="logo" />
       <form onSubmit={onSubmit}>
         <div className="user-login__form-control">
           <label htmlFor="user"></label>
@@ -69,7 +29,7 @@ const UserLogin = () => {
             id="user"
             type="text"
             name="user"
-            onChange={onChange}
+            // onChange={onChange}
             value={values.user}
             placeholder=" Usuário "
           />
@@ -96,13 +56,7 @@ const UserLogin = () => {
         >
           Entrar
         </UIButton>
-        <div className="containerRegister">
-          <a className="alterPassword" onClick={() => recuperarSenha(values.user)}>Alterar senha</a>
-          <p className="separator">\</p>
-          <a onClick={() => recuperarSenha(values.user)}>Cadastrar</a>
-        </div>
-
-
+        <a onClick={() => recuperarSenha(values.user)}>Alterar senha</a>
       </form>
     </div>
   );
