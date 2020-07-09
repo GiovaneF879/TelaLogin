@@ -102,8 +102,6 @@ C:\AWRIGHT\TelaLogin\TelaLogin\Backend\src\OngPetCare.Api\OngPetCare.Api\bin\Deb
 C:\AWRIGHT\TelaLogin\TelaLogin\Backend\src\OngPetCare.Api\OngPetCare.Api\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
 C:\AWRIGHT\TelaLogin\TelaLogin\Backend\src\OngPetCare.Api\OngPetCare.Api\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 C:\AWRIGHT\TelaLogin\TelaLogin\Backend\src\OngPetCare.Api\OngPetCare.Api\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
-C:\AWRIGHT\TelaLogin\TelaLogin\Backend\src\OngPetCare.Api\OngPetCare.Api\obj\Debug\netcoreapp3.1\OngPetCare.Api.MvcApplicationPartsAssemblyInfo.cs
-C:\AWRIGHT\TelaLogin\TelaLogin\Backend\src\OngPetCare.Api\OngPetCare.Api\obj\Debug\netcoreapp3.1\OngPetCare.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\AWRIGHT\TelaLogin\TelaLogin\Backend\src\OngPetCare.Api\OngPetCare.Api\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
 C:\AWRIGHT\TelaLogin\TelaLogin\Backend\src\OngPetCare.Api\OngPetCare.Api\bin\Debug\netcoreapp3.1\EntityFramework.dll
 C:\AWRIGHT\TelaLogin\TelaLogin\Backend\src\OngPetCare.Api\OngPetCare.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
@@ -139,3 +137,7 @@ C:\AWRIGHT\TelaLogin\TelaLogin\Backend\src\OngPetCare.Api\OngPetCare.Api\bin\Deb
 C:\AWRIGHT\TelaLogin\TelaLogin\Backend\src\OngPetCare.Api\OngPetCare.Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\AWRIGHT\TelaLogin\TelaLogin\Backend\src\OngPetCare.Api\OngPetCare.Api\bin\Debug\netcoreapp3.1\OngPetCare.infra.dll
 C:\AWRIGHT\TelaLogin\TelaLogin\Backend\src\OngPetCare.Api\OngPetCare.Api\bin\Debug\netcoreapp3.1\OngPetCare.infra.pdb
+C:\AWRIGHT\TelaLogin\TelaLogin\Backend\src\OngPetCare.Api\OngPetCare.Api\obj\Debug\netcoreapp3.1\OngPetCare.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\AWRIGHT\TelaLogin\TelaLogin\Backend\src\OngPetCare.Api\OngPetCare.Api\obj\Debug\netcoreapp3.1\OngPetCare.Api.MvcApplicationPartsAssemblyInfo.cache
+C:\AWRIGHT\TelaLogin\TelaLogin\Backend\src\OngPetCare.Api\OngPetCare.Api\bin\Debug\netcoreapp3.1\SendGrid.dll
+C:\AWRIGHT\TelaLogin\TelaLogin\Backend\src\OngPetCare.Api\OngPetCare.Api\bin\Debug\netcoreapp3.1\StarkbankEcdsa.dll

@@ -63,8 +63,8 @@ namespace OngPetCare.Api.Services
                 }
 
                 var email = $"<p>Olá {user.UserName}, sua nova senha é {password}";
-                var emailService = new EmailSMTPService();
-                emailService.ExecSendEmail(dto.Email, "Recuperação de senha", email);
+                var emailService = new SendGridService();
+                await emailService.ExecSendEmailAsync(dto.Email, "Recuperação de senha", email);
 
                 return result.Succeeded;
             }

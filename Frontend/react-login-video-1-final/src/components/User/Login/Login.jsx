@@ -97,9 +97,9 @@ const UserLogin = () => {
           Entrar
         </UIButton>
         <div className="containerRegister">
-          <a className="alterPassword" onClick={() => recuperarSenha(values.user)}>Alterar senha</a>
-          <p className="separator">\</p>
-          <a onClick={() => recuperarSenha(values.user)}>Cadastrar</a>
+          <a className="alterPassword" onClick={() => history.push('/recuperar-senha')}>Esqueci minha senha</a>
+          <p className="separator">|</p>
+          <a onClick={() => history.push('/registrar')}>Registre-se</a>
         </div>
 
 

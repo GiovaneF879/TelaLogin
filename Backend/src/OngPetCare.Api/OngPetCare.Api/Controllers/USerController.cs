@@ -30,7 +30,13 @@ namespace OngPetCare.Api.Controllers
             var itsOk = await service.Create(model);
             if (itsOk)
             {
-                return Ok();
+                
+                var objecResult = await service.Login(model.UserName, model.Password);
+
+                if (objecResult.error == true)
+                    return new UnauthorizedResult();
+
+                return Ok(objecResult);
             }
             else
             {
