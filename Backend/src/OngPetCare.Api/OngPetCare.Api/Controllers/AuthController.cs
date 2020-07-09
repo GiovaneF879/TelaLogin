@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-
-using OngPetCare.Api.Repositories;
+using OngPetCare.Api.Models;
 using OngPetCare.Api.Services;
 using OngPetCare.infra.Models;
 using System;
@@ -10,48 +9,29 @@ using System.Threading.Tasks;
 
 namespace OngPetCare.Api.Controllers
 {
-    [Route("v1/account")]
+    [Route("v1/auth")]
     [ApiController]
-    public class HomeController : ControllerBase
+    public class AuthController : ControllerBase
     {
         private readonly UserManager<User> _UserManager;
         private readonly SignInManager<User> _SignManager;
 
-        public HomeController(UserManager<User> userManager, SignInManager<User> signInManager)
+        public AuthController(UserManager<User> userManager, SignInManager<User> signInManager)
         {
             _UserManager = userManager;
             _SignManager = signInManager;
         }
 
         [HttpPost]
-        [Route("login")]
-        public async Task<ActionResult<dynamic>> Authenticate([FromBody] User model)
+        public async Task<ActionResult> Authenticate([FromBody] UserLoginDto model)
         {
+            var service = new UserService(_UserManager, _SignManager);
+            var objecResult = await service.Login(model.UserName, model.Password);
 
-            var token = new UserService(_UserManager, _SignManager)
-            . Login(model.Email, model.PasswordHash)
+            if (objecResult.error == true)
+                return new UnauthorizedResult();
 
-
-
-            // Recupera o usuário
-            var user = UserRepository.Get(model.Username, model.Password);
-
-            // Verifica se o usuário existe
-            if (user == null)
-                return NotFound(new { message = "Usuário ou senha inválidos" });
-
-            // Gera o Token
-            var token = TokenService.GenerateToken(user);
-
-            // Oculta a senha
-            user.Password = "";
-
-            // Retorna os dados
-            return new
-            {
-                user = user,
-                token = token
-            };
+            return Ok(objecResult);
         }
 
         [HttpGet]
