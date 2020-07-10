@@ -11,11 +11,10 @@ namespace OngPetCare.Api.Services
     {
         public async Task ExecSendEmailAsync(string destination, string subject, string body)
         {
-            var _client = new SendGridClient("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");
+            var _client = new SendGridClient("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");
             var msg = new SendGridMessage()
             {
-
-                From = new EmailAddress("wellingtonntonn@gmail.com"),
+                From = new EmailAddress("azure_9b0ff3bd5f1985a117090687372c73b0@azure.com"),
                 Subject = subject,
                 HtmlContent = body
             };

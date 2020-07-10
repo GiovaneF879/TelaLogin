@@ -29,8 +29,8 @@ const Register = () => {
     });
   }
 
-  async function register({ user, password, name, email }) {
-    const { status, data } = await service.register(user, password, name, email);
+  async function register({ password, email }) {
+    const { status, data } = await service.register(password, email);
     if (status === 200) {
       return { token: data.token };
     }
@@ -54,18 +54,8 @@ const Register = () => {
   return (
     <div className="user-login">
       <img src={logo} className="logo" alt="logo" />
+      <div>CADASTRO</div>
       <form onSubmit={onSubmit}>
-        <div className="user-login__form-control">
-          <label htmlFor="name"></label>
-          <input
-            id="name"
-            type="text"
-            name="name"
-            onChange={onChange}
-            value={values.name}
-            placeholder="Nome Completo"
-          />
-        </div>
         <div className="user-login__form-control">
           <label htmlFor="email"></label>
           <input
@@ -75,17 +65,6 @@ const Register = () => {
             onChange={onChange}
             value={values.email}
             placeholder="E-mail"
-          />
-        </div>
-        <div className="user-login__form-control">
-          <label htmlFor="user"></label>
-          <input
-            id="user"
-            type="text"
-            name="user"
-            onChange={onChange}
-            value={values.user}
-            placeholder=" Usuário "
           />
         </div>
         <div className="user-login__form-control">

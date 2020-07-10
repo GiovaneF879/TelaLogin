@@ -31,7 +31,7 @@ namespace OngPetCare.Api.Controllers
             if (itsOk)
             {
                 
-                var objecResult = await service.Login(model.UserName, model.Password);
+                var objecResult = await service.Login(model.Email, model.Password);
 
                 if (objecResult.error == true)
                     return new UnauthorizedResult();
@@ -49,13 +49,13 @@ namespace OngPetCare.Api.Controllers
         {
             var service = new UserService(_UserManager, _SignManager);
             var itsOk = await service.RecoveryPassword(model);
-            if (itsOk)
+            if (itsOk == true)
             {
                 return Ok();
             }
             else
             {
-                return BadRequest();
+                return BadRequest(itsOk);
             }
         }
 

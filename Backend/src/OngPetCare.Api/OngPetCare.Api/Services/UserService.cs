@@ -40,9 +40,9 @@ namespace OngPetCare.Api.Services
         {
             var result = await _UserManager.CreateAsync(new User()
             {
-                UserName = dto.UserName,
+                UserName = dto.Email,
                 Email = dto.Email,
-                FullName = dto.Name
+                FullName = dto.Email
             }, dto.Password);
 
             return result.Succeeded;
@@ -53,7 +53,7 @@ namespace OngPetCare.Api.Services
 
             try
             {
-                var user = await _UserManager.FindByEmailAsync(dto.Email);
+                var user = await _UserManager.FindByNameAsync(dto.Email);
                 var password = GeneratePassword(8);
                 var token = await _UserManager.GeneratePasswordResetTokenAsync(user);
                 var result = await _UserManager.ResetPasswordAsync(user, token, password);
@@ -64,15 +64,14 @@ namespace OngPetCare.Api.Services
 
                 var email = $"<p>Olá {user.UserName}, sua nova senha é {password}";
                 var emailService = new SendGridService();
-                await emailService.ExecSendEmailAsync(dto.Email, "Recuperação de senha", email);
+                await emailService.ExecSendEmailAsync(user.Email, "Recuperação de senha", email);
 
                 return result.Succeeded;
             }
             catch(Exception ex)
             {
-                return false;
+                return ex;
             }
-
            
         }
 
