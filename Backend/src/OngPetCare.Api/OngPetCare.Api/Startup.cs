@@ -89,6 +89,7 @@ namespace Shop
                     }
                 });
             });
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -101,7 +102,6 @@ namespace Shop
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
             app.UseCors(x => x
                 .AllowAnyOrigin()
                 .AllowAnyMethod()

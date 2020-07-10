@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "o5H5clUkzhxUDPcS9vd6cz5nBMua467E4I7NBap7pMFH6FdunUBeSMEItClST9H58xNbz1fBarymLZ4ryXkERw==",
+  "dgSpecHash": "lfXTeFpuQqPUnRoDsGiFILCpTbHnUxgNJytrNSk8guj0cqv7Gi5YdbUwKPt4yypq/SB7LLfx3lJ9EnWzLRj+pg==",
   "success": true,
   "projectFilePath": "C:\\AWRIGHT\\TelaLogin\\TelaLogin\\Backend\\src\\OngPetCare.Api\\OngPetCare.Api\\OngPetCare.Api.csproj",
   "expectedPackageFiles": [
@@ -95,10 +95,12 @@
     "C:\\Users\\welli\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\welli\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\welli\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\welli\\.nuget\\packages\\sendgrid\\9.18.0\\sendgrid.9.18.0.nupkg.sha512",
     "C:\\Users\\welli\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.2\\sqlitepclraw.bundle_e_sqlite3.2.0.2.nupkg.sha512",
     "C:\\Users\\welli\\.nuget\\packages\\sqlitepclraw.core\\2.0.2\\sqlitepclraw.core.2.0.2.nupkg.sha512",
     "C:\\Users\\welli\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.2\\sqlitepclraw.lib.e_sqlite3.2.0.2.nupkg.sha512",
     "C:\\Users\\welli\\.nuget\\packages\\sqlitepclraw.provider.dynamic_cdecl\\2.0.2\\sqlitepclraw.provider.dynamic_cdecl.2.0.2.nupkg.sha512",
+    "C:\\Users\\welli\\.nuget\\packages\\starkbank-ecdsa\\1.2.0\\starkbank-ecdsa.1.2.0.nupkg.sha512",
     "C:\\Users\\welli\\.nuget\\packages\\swashbuckle.aspnetcore\\5.5.0\\swashbuckle.aspnetcore.5.5.0.nupkg.sha512",
     "C:\\Users\\welli\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.5.0\\swashbuckle.aspnetcore.swagger.5.5.0.nupkg.sha512",
     "C:\\Users\\welli\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.5.0\\swashbuckle.aspnetcore.swaggergen.5.5.0.nupkg.sha512",
