@@ -9,7 +9,7 @@ import RegisterService from 'pages/Register/Service';
 const service = new RegisterService();
 
 function initialState() {
-  return { user: '', password: '', name: '', email: '' };
+  return { email: '', password: '' };
 }
 
 
@@ -29,8 +29,8 @@ const Register = () => {
     });
   }
 
-  async function register({ password, email }) {
-    const { status, data } = await service.register(password, email);
+  async function register({ email, password }) {
+    const { status, data } = await service.register(email, password);
     if (status === 200) {
       return { token: data.token };
     }
