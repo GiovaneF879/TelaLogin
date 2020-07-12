@@ -5,7 +5,6 @@
 
 .containerRegister {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -57,4 +56,22 @@
 
 .user-login__error {
     color: red;
+}
+
+.alterPassword,
+.registerLink,
+.comeBack {
+    cursor: pointer;
+}
+
+.textRegister {
+    text-align: center;
+    font-weight: bold;
+    font-family: cursive;
+    margin-bottom: 10px;
+}
+
+.containerComeBack {
+    text-align: center;
+    margin-top: 10px;
 }

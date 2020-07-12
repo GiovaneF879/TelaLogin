@@ -85,9 +85,6 @@ const UserLogin = () => {
             placeholder=" Senha "
           />
         </div>
-        {error && (
-          <div className="user-login__error">{error}</div>
-        )}
         <UIButton
           type="submit"
           theme="contained-green"
@@ -99,10 +96,11 @@ const UserLogin = () => {
         <div className="containerRegister">
           <a className="alterPassword" onClick={() => history.push('/recuperar-senha')}>Esqueci minha senha</a>
           <p className="separator">|</p>
-          <a onClick={() => history.push('/registrar')}>Registre-se</a>
+          <a className="registerLink" onClick={() => history.push('/registrar')}>Registre-se</a>
         </div>
-
-
+        {error && (
+          <div className="user-login__error">{error}</div>
+        )}
       </form>
     </div>
   );

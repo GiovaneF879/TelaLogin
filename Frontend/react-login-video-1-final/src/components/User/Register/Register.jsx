@@ -54,7 +54,7 @@ const Register = () => {
   return (
     <div className="user-login">
       <img src={logo} className="logo" alt="logo" />
-      <div>CADASTRO</div>
+      <div className="textRegister">CADASTRO</div>
       <form onSubmit={onSubmit}>
         <div className="user-login__form-control">
           <label htmlFor="email"></label>
@@ -79,10 +79,8 @@ const Register = () => {
             placeholder="Senha"
             required
           />
+          <p className="labelCaracteres">Mínimo de 6 caracteres</p>
         </div>
-        {error && (
-          <div className="user-login__error">{error}</div>
-        )}
         <UIButton
           type="submit"
           theme="contained-green"
@@ -91,7 +89,12 @@ const Register = () => {
         >
           Entrar
         </UIButton>
-        <a onClick={() => history.push('/login')}>Voltar</a>
+        <div className="containerComeBack">
+          <a className="comeBack" onClick={() => history.push('/login')}>Voltar</a>
+        </div>
+        {error && (
+          <div className="user-login__error">{error}</div>
+        )}
       </form>
     </div>
   );

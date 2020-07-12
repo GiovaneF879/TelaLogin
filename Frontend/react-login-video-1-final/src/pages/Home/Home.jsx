@@ -6,7 +6,7 @@ const PagesHome = () => {
   const { setToken } = useContext(StoreContext);
   return (
     <div className="pages-home">
-      Parabéns, você conseguiu
+      Bem vindo a Ong Pet Care!
       <br />
       <button type="button" onClick={() => setToken(null)}>
         Sair

@@ -62,11 +62,6 @@ const UserForgotPassword = () => {
                         placeholder=" Informe seu e-mail "
                     />
                 </div>
-
-                {error && (
-                    <div className="user-login__error">{error}</div>
-                )}
-
                 <UIButton
                     type="submit"
                     theme="contained-green"
@@ -75,14 +70,15 @@ const UserForgotPassword = () => {
                 >
                     Receber nova senha
                 </UIButton>
+                <div className="containerRegister">
+                    <a className="comeBack" onClick={() => history.push('/login')}>Voltar</a>
+                </div>
+                {error && (
+                    <div className="user-login__error">{error}</div>
+                )}
                 {sucess && (
                     <div className="user-login__sucess">Enviamos sua nova senha para o seu e-mail. Confirme sua caixa de spam.</div>
                 )}
-                <div className="containerRegister">
-                    <a onClick={() => history.push('/login')}>Voltar</a>
-                </div>
-
-
             </form>
         </div>
     );
