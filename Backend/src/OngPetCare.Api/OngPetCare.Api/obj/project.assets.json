@@ -9146,19 +9146,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\welli\\.nuget\\packages\\": {}
+    "C:\\Users\\danib\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\AWRIGHT\\TelaLogin\\TelaLogin\\Backend\\src\\OngPetCare.Api\\OngPetCare.Api\\OngPetCare.Api.csproj",
+      "projectUniqueName": "C:\\GIT\\OngPetCare\\Backend\\src\\OngPetCare.Api\\OngPetCare.Api\\OngPetCare.Api.csproj",
       "projectName": "OngPetCare.Api",
-      "projectPath": "C:\\AWRIGHT\\TelaLogin\\TelaLogin\\Backend\\src\\OngPetCare.Api\\OngPetCare.Api\\OngPetCare.Api.csproj",
-      "packagesPath": "C:\\Users\\welli\\.nuget\\packages\\",
-      "outputPath": "C:\\AWRIGHT\\TelaLogin\\TelaLogin\\Backend\\src\\OngPetCare.Api\\OngPetCare.Api\\obj\\",
+      "projectPath": "C:\\GIT\\OngPetCare\\Backend\\src\\OngPetCare.Api\\OngPetCare.Api\\OngPetCare.Api.csproj",
+      "packagesPath": "C:\\Users\\danib\\.nuget\\packages\\",
+      "outputPath": "C:\\GIT\\OngPetCare\\Backend\\src\\OngPetCare.Api\\OngPetCare.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\welli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\danib\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9170,9 +9170,10 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\AWRIGHT\\TelaLogin\\TelaLogin\\Backend\\src\\OngPetCare.Api\\OngPetCare.infra\\OngPetCare.infra.csproj": {
-              "projectPath": "C:\\AWRIGHT\\TelaLogin\\TelaLogin\\Backend\\src\\OngPetCare.Api\\OngPetCare.infra\\OngPetCare.infra.csproj"
+            "C:\\GIT\\OngPetCare\\Backend\\src\\OngPetCare.Api\\OngPetCare.infra\\OngPetCare.infra.csproj": {
+              "projectPath": "C:\\GIT\\OngPetCare\\Backend\\src\\OngPetCare.Api\\OngPetCare.infra\\OngPetCare.infra.csproj"
             }
           }
         }
@@ -9185,6 +9186,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.AspNetCore.Authentication": {
             "target": "Package",
@@ -9229,7 +9231,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

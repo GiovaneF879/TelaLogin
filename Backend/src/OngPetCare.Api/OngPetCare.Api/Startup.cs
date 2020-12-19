@@ -31,7 +31,7 @@ namespace Shop
             services.AddControllers();
 
             services.AddDbContext<DataBaseContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")
+                options.UseSqlServer("Server=trabalho-ead.database.windows.net;Initial Catalog=OngPetCare;Persist Security Info=False;User ID=trabalhoead;Password=N1235Rvuhkend;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
                     , opt => opt.MigrationsAssembly("OngPetCare.infra")));
 
 
@@ -45,8 +45,6 @@ namespace Shop
                          })
             .AddEntityFrameworkStores<DataBaseContext>()
             .AddDefaultTokenProviders();
-
-
 
             var key = Encoding.ASCII.GetBytes(Settings.Secret);
             services.AddAuthentication(x =>
