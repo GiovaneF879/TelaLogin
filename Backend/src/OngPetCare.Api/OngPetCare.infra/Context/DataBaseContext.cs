@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using OngPetCare.infra.Configuration;
+using OngPetCare.infra.Models;
 
 namespace OngPetCare.infra.Context
 {
@@ -14,7 +15,9 @@ namespace OngPetCare.infra.Context
         {
             base.OnModelCreating(builder);
             builder.ApplyConfiguration(new UserConfiguration());
-
+            builder.Entity<Animal>().Property(x => x.Id).ValueGeneratedOnAdd();
         }
+
+        public DbSet<Animal> Animals { get; set; }
     }
 }
